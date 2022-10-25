@@ -38,8 +38,19 @@ for (let i = 0; i < quizQuestions.length; i++) {
 
 // 4. Display the number of correct answers to the user
 
-document.querySelector('main').innerHTML = `
+if (correctAnswers != 0) {
+  
+  document.querySelector('main').innerHTML = `
     
-<h1 class='blink'>You got ${correctAnswers} question(s) correct.</h1>
+<h1 class='blink'>You got ${correctAnswers} question(s) correct &#127882.</h1>
   
 `;
+} else {
+  
+  document.querySelector('main').innerHTML =
+  `
+  <h1 class='blink'>You got ${correctAnswers} question(s) correct &#128557.</h1>
+  
+  `;
+
+}
