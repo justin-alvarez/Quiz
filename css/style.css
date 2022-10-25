@@ -56,6 +56,16 @@
     box-shadow: 0 2px 0 rgba(0,0,0, 0.1);
   }
   
+.blink{
+    animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #FFFFFF;    }
+    49%{    color: #FFFFFF; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #FFFFFF;    }
+}
   
   
   

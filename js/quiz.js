@@ -40,6 +40,6 @@ for (let i = 0; i < quizQuestions.length; i++) {
 
 document.querySelector('main').innerHTML = `
     
-<h1>You got ${correctAnswers} question(s) correct.</h1>
+<h1 class='blink'>You got ${correctAnswers} question(s) correct.</h1>
   
 `;
