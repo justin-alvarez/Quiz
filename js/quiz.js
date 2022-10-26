@@ -7,6 +7,10 @@ const quizQuestions = [
 
 ]
 
+const correct =[];
+
+const incorrect = [];
+
 // 2. Store the number of questions answered correctly
 
 let correctAnswers = 0
@@ -20,37 +24,56 @@ let correctAnswers = 0
         answered questions increments by 1
 */
 
+
 for (let i = 0; i < quizQuestions.length; i++) {
 
-  let input = prompt(quizQuestions[i][0]);
+  let question = quizQuestions[i][0];
 
-  if (input.toLowerCase() === quizQuestions[i][1]) {
-    correctAnswers ++
+  let answer = quizQuestions[i][1];
+  
+  let input = prompt(question);
 
-    console.log(correctAnswers);
-  }  else {
-    correctAnswers += 0
+  if ( input === answer) {
+    correctAnswers++;
+    correct.push(question);
+
+  } else {
+    incorrect.push(question);
+
   }
-
-
 }   
 
 
+function createListItems(arr) {
+  let list = '';
+  for (let i = 0; i < arr.length; i++) {
+    list += `<li>${arr[i]}</li>`;
+  }
+  return list;
+}  
+
+function createListItemsWrong(arr) {
+  let list = '';
+  for (let i = 0; i < arr.length; i++) {
+    list += `<li class='wrong'>${arr[i]}</li>`;
+  }
+  return list;
+}  
+
 // 4. Display the number of correct answers to the user
 
-if (correctAnswers != 0) {
-  
-  document.querySelector('main').innerHTML = `
-    
-<h1 class='blink'>You got ${correctAnswers} question(s) correct &#127882.</h1>
-  
-`;
-} else {
-  
-  document.querySelector('main').innerHTML =
-  `
-  <h1 class='blink'>You got ${correctAnswers} question(s) correct &#128557.</h1>
-  
-  `;
+let html1 = `
+<h1>You got ${correctAnswers} questio(s) correct</h1>
+<h2>You got these questions right:</h2>
+<ol>
+  ${createListItems(correct)}
+</ol>
 
-}
+<h2>You got these questions wrong:</h2>
+<ol>
+  ${createListItemsWrong(incorrect)}
+</ol>
+`
+  document.querySelector('main').innerHTML = html1;
+
+

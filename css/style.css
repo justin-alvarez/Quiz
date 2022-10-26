@@ -5,7 +5,7 @@
     color: #fff;
     font-size: 1em;
     font-family: "Gotham Rounded A", "Gotham Rounded B", "Gotham Rounded", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-color: #25BE8E;
+    background-color: #edeff0;
   }
   
   main {
@@ -17,19 +17,18 @@
   }
   
   h1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    font-size: 3.75em;
+    margin-bottom: 0.5em;
     text-align: center;
-    min-height: 80vh;;
-    font-size: 4em;
+    color: #384047;
+    
   }
   
   h2 {
     font-size: 2.5em;
     margin-top: 1.5em;
     font-weight: normal;
+    color: #576366;
   }
   
   main p {
@@ -49,25 +48,22 @@
   li {
     line-height: 1.25;
     margin: 0 0 1.1em;
-    color: #42b4d6; 
+    color: #04AA6D; 
     padding: 0.8em;
-    background-color: white;
+    background-color: #D9EEE1;
     border-radius: 3px;
     box-shadow: 0 2px 0 rgba(0,0,0, 0.1);
   }
   
-.blink{
-    animation:blinkingText 1.2s infinite;
-}
-@keyframes blinkingText{
-    0%{     color: #FFFFFF;    }
-    49%{    color: #FFFFFF; }
-    60%{    color: transparent; }
-    99%{    color:transparent;  }
-    100%{   color: #FFFFFF;    }
-}
-  
-  
+  .wrong {
+    line-height: 1.25;
+    margin: 0 0 1.1em;
+    color: #b94a48; 
+    padding: 0.8em;
+    background-color: #FFC0C7;
+    border-radius: 3px;
+    box-shadow: 0 2px 0 rgba(0,0,0, 0.1);
+  }
   
   
   
