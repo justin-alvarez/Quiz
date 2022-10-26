@@ -33,7 +33,7 @@ for (let i = 0; i < quizQuestions.length; i++) {
   
   let input = prompt(question);
 
-  if ( input === answer) {
+  if ( input.toLowerCase() === answer) {
     correctAnswers++;
     correct.push(question);
 
